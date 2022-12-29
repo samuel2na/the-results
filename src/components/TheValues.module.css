@@ -21,7 +21,11 @@
   padding: 0.3rem;
   text-align: right;
   margin: 0 0 0.3rem 0;
-  /* width: 11rem; */
+}
+
+.inputValues input:hover{
+  box-shadow: 7px 7px 11px var(--green-light-400);
+   /* rgb(224, 195, 195) */
 }
 
 .bto {
@@ -38,6 +42,7 @@ button:hover {
   opacity: calc(0.8);
   cursor: pointer;
   margin-right: 1px;
+  box-shadow: 7px 7px 11px var(--green-light-400);
 }
 
 .boxResults{
