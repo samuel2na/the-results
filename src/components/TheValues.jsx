@@ -60,6 +60,9 @@ export function TheValues(){
           <Results theTitle="Divisão: " theValue={valueDivision} />
           <Results theTitle="Multiplicação: " theValue={valueMultiplication} />
         </div>
+        <div className={styles.msgAtualizations}>
+          <label>Em breve novas atualizações de cálculos...</label>
+        </div>
       </div>
 
       {/* <div className={styles.anuncios}>

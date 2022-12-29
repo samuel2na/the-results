@@ -61,3 +61,16 @@ h3 {
   color: var(--gray-600);
   margin-top: 3rem;
 }
+
+.msgAtualizations {
+  color: rgb(187, 151, 218);
+  margin-top: 3.5rem;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+.msgAtualizations label:hover {
+  color: rgb(150, 101, 196);
+  font-size: 14px;
+}
