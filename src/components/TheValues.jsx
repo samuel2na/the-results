@@ -9,20 +9,32 @@ export function TheValues(){
   const [valueMultiplication, setValueMultiplication] = useState(0);
 
   function handleCalcule(){
-    let vlrA = parseInt(document.querySelector("#valueA").value);
-    let vlrB = parseInt(document.querySelector("#valueB").value);
+    let vlrA = parseFloat(document.querySelector("#valueA").value);
+    let vlrB = parseFloat(document.querySelector("#valueB").value);
     let v = 1;
-    //console.log(vlrA, vlrB);
     
     if(isNaN(vlrA) || isNaN(vlrB)) { 
       alert("Informe números válidos!");
       vlrA = 0; vlrB = 0; v = 0;
     }
 
-    setValueSum(vlrA + vlrB);
-    setValueSubtration(vlrA - vlrB);
-    setValueDivision(((v == 0)? 0 : vlrA / vlrB));
-    setValueMultiplication(vlrA * vlrB);
+    const vSum = NumberFormating(vlrA + vlrB);
+    const vSub = NumberFormating(vlrA - vlrB);
+    const vDiv = NumberFormating(((v == 0)? 0 : vlrA / vlrB));
+    const vMul = NumberFormating(vlrA * vlrB);
+    //console.log(vSum, vlrA, vlrB);
+
+    setValueSum(vSum);
+    setValueSubtration(vSub);
+    setValueDivision(vDiv);
+    setValueMultiplication(vMul);
+  }
+
+  function NumberFormating(theNumber){
+    return (theNumber).toLocaleString('pt-BR', {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    });
   }
 
   return(
@@ -30,8 +42,8 @@ export function TheValues(){
     <div className={styles.container}>
       <h2>Informe abaixo os valores a serem calculados</h2>
       <div className={styles.inputValues}>
-        <input id="valueA" type="text" placeholder="valor A"></input>
-        <input id="valueB" type="text" placeholder="valor B"></input>
+        <input id="valueA" type="number" placeholder="valor A"></input>
+        <input id="valueB" type="number" placeholder="valor B"></input>
       </div>
       <button className={styles.bto} onClick={handleCalcule}>Calcular</button>
       <div>
