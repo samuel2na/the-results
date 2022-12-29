@@ -8,7 +8,7 @@ export function TheValues(){
   const [valueDivision, setValueDivision] = useState(0);
   const [valueMultiplication, setValueMultiplication] = useState(0);
 
-  function handleCalcule(){
+  async function handleCalcule(){
     let vlrA = parseFloat(document.querySelector("#valueA").value);
     let vlrB = parseFloat(document.querySelector("#valueB").value);
     let v = 1;
@@ -18,10 +18,10 @@ export function TheValues(){
       vlrA = 0; vlrB = 0; v = 0;
     }
 
-    const vSum = NumberFormating(vlrA + vlrB);
-    const vSub = NumberFormating(vlrA - vlrB);
-    const vDiv = NumberFormating(((v == 0)? 0 : vlrA / vlrB));
-    const vMul = NumberFormating(vlrA * vlrB);
+    const vSum = await NumberFormating(vlrA + vlrB);
+    const vSub = await NumberFormating(vlrA - vlrB);
+    const vDiv = await NumberFormating(((v == 0)? 0 : vlrA / vlrB));
+    const vMul = await NumberFormating(vlrA * vlrB);
     //console.log(vSum, vlrA, vlrB);
 
     setValueSum(vSum);
@@ -30,7 +30,7 @@ export function TheValues(){
     setValueMultiplication(vMul);
   }
 
-  function NumberFormating(theNumber){
+  async function NumberFormating(theNumber){
     return (theNumber).toLocaleString('pt-BR', {
       minimumFractionDigits: 2,
       maximumFractionDigits: 2
