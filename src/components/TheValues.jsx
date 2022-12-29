@@ -33,9 +33,10 @@ export function TheValues(){
         <input id="valueA" type="text" placeholder="valor A"></input>
         <input id="valueB" type="text" placeholder="valor B"></input>
       </div>
-      <button onClick={handleCalcule}>Calcular</button>
-
-      <h3>Resultados calculados: </h3>
+      <button className={styles.bto} onClick={handleCalcule}>Calcular</button>
+      <div>
+        <h3>Resultados calculados: </h3>
+      </div>
       <div className={styles.boxResults}>
         <Results theTitle="Soma: " theValue={valueSum} />
         <Results theTitle="Subtração: " theValue={valueSubtration} />
