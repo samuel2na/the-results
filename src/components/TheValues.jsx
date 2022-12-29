@@ -39,23 +39,34 @@ export function TheValues(){
 
   return(
     <>
-    <div className={styles.container}>
-      <h2>Informe abaixo os valores a serem calculados</h2>
-      <div className={styles.inputValues}>
-        <input id="valueA" type="number" placeholder="valor A"></input>
-        <input id="valueB" type="number" placeholder="valor B"></input>
+    {/* <div className={styles.Geral}>
+
+      <div className={styles.Anuncios}>
+        anuncio 01
+      </div> */}
+      <div className={styles.container}>
+        <h2>Informe abaixo os valores a serem calculados</h2>
+        <div className={styles.inputValues}>
+          <input id="valueA" type="number" placeholder="valor A"></input>
+          <input id="valueB" type="number" placeholder="valor B"></input>
+        </div>
+        <button className={styles.bto} onClick={handleCalcule}>Calcular</button>
+        <div>
+          <h3>Resultados calculados: </h3>
+        </div>
+        <div className={styles.boxResults}>
+          <Results theTitle="Soma: " theValue={valueSum} />
+          <Results theTitle="Subtração: " theValue={valueSubtration} />
+          <Results theTitle="Divisão: " theValue={valueDivision} />
+          <Results theTitle="Multiplicação: " theValue={valueMultiplication} />
+        </div>
       </div>
-      <button className={styles.bto} onClick={handleCalcule}>Calcular</button>
-      <div>
-        <h3>Resultados calculados: </h3>
+
+      <div className={styles.anuncios}>
+        anuncio
       </div>
-      <div className={styles.boxResults}>
-        <Results theTitle="Soma: " theValue={valueSum} />
-        <Results theTitle="Subtração: " theValue={valueSubtration} />
-        <Results theTitle="Divisão: " theValue={valueDivision} />
-        <Results theTitle="Multiplicação: " theValue={valueMultiplication} />
-      </div>
-    </div>
+
+    {/* </div> */}
     </>
   )
 }
