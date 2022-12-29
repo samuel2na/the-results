@@ -1,0 +1,41 @@
+.container{
+  max-width: 40rem;
+}
+
+.inputValues{
+  /* padding: 0.5rem; */
+  margin: 1rem 0 1rem 0;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.inputValues input {
+  padding: 0.3rem;
+  text-align: right;
+}
+
+button {
+  background: var(--green-500);
+  color: var(--white);
+  padding: 0.5rem;
+  margin: 0 0 2rem 0;
+  width: 100%;
+}
+
+button:hover {
+  opacity: calc(0.8);
+  cursor: pointer;
+  margin-right: 1px;
+}
+
+.boxResults{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+h3 {
+  color: var(--purple-100);
+}
