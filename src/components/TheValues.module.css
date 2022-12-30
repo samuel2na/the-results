@@ -25,7 +25,6 @@
 
 .inputValues input:hover{
   box-shadow: 7px 7px 11px var(--green-light-400);
-   /* rgb(224, 195, 195) */
 }
 
 .bto {
@@ -68,7 +67,7 @@ h3 {
 }
 
 .msgAtualizations {
-  color: rgb(187, 151, 218);
+  color: var(--gray-400);
   margin-top: 3.5rem;
   font-size: 12px;
   display: flex;
@@ -76,6 +75,6 @@ h3 {
 }
 
 .msgAtualizations label:hover {
-  color: rgb(150, 101, 196);
+  color: rgb(187, 151, 218);
   font-size: 14px;
 }

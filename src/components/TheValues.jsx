@@ -59,6 +59,9 @@ export function TheValues(){
           <Results theTitle="Subtração: " theValue={valueSubtration} />
           <Results theTitle="Divisão: " theValue={valueDivision} />
           <Results theTitle="Multiplicação: " theValue={valueMultiplication} />
+          {/* 
+            - Raiz Quadrada; - Porcentagem; - 
+          */}
         </div>
         <div className={styles.msgAtualizations}>
           <label>Em breve novas atualizações de cálculos...</label>
