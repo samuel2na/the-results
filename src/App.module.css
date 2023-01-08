@@ -5,9 +5,32 @@
 
   display: grid;
   /*a 1° coluna sidebar tem larg fixa de 256px; a 2° é 1fr e pode oculpar o quanto couber na tela*/
-  /* grid-template-columns: 256px 1fr; 
-  gap: 2rem; */
+  grid-template-columns: 256px 1fr; 
+  gap: 2rem;
   /* obriga as duas colunas(sidebar e post) estarem alinhados ao topo, caso contrario serão a sidebar seria esticada para ficar no mesmo tamanho do post*/
+  /* align-items: center;
+  justify-content: center; 
+  */
+}
+
+.textInitial {
+  display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%;
+  color: var(--gray-400);
 }
+/* .buttonLink {
+  display: grid;  
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  margin: 1rem 0;
+} */
+
+/* .bto {
+  width: 100%;
+  background: var(--green-500);
+  color: var(--white);
+  padding: 0.5rem;
+  margin: 0 0 2rem 0;
+} */

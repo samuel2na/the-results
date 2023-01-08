@@ -9,6 +9,7 @@
   --gray-900: #121214;
 
   --green-light-400: #90b10c;
+  --green-400: #01a171;
   --green-500: #00875f;
   --purple-200: #7676f7;
   --yellow-100: #f1f5e3;
@@ -33,3 +34,11 @@ body, input, textarea, button {
   font-weight: 400;
   font-size: 1rem; /* a font se adapata ao tamanho da tela 1rem = 16px; */
 }
+
+/* .bto {
+  width: 100%;
+  background: var(--green-500);
+  color: var(--white);
+  padding: 0.5rem;
+  margin: 0 0 2rem 0;
+} */

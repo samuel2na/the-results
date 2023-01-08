@@ -47,10 +47,12 @@ export function TheValues(){
       <div className={styles.container}>
         <h2>Informe abaixo os valores a serem calculados</h2>
         <div className={styles.inputValues}>
-          <input id="valueA" type="number" placeholder="valor A"></input>
-          <input id="valueB" type="number" placeholder="valor B"></input>
+          <div>
+            <input id="valueA" type="number" placeholder="valor A"></input>
+            <input id="valueB" type="number" placeholder="valor B"></input>
+          </div>
+          <button className={styles.bto} onClick={handleCalcule}>Calcular</button>
         </div>
-        <button className={styles.bto} onClick={handleCalcule}>Calcular</button>
         <div>
           <h3>Resultados calculados: </h3>
         </div>
