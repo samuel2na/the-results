@@ -1,8 +1,8 @@
-import { useState } from 'react'
-import { Header } from './components/Header'
-import { Home } from './components/Home'
-import { TheValues } from './components/TheValues'
+import { useState } from 'react';
+import { Header } from './components/Header';
+import { TheValues } from './components/TheValues';
 import { Sidebar } from './components/Sidebar';
+import { TodoList } from './components/TodoList';
 
 import styles from './App.module.css'
 import './global.css'
@@ -29,7 +29,7 @@ function App() {
         <Sidebar handleLink={handleLink} />
         <main>
           {(btoTodo == 0 && btoCalc == 0) ? <span className={styles.textInitial}>Nada por aqui :D</span> : ""}
-          {(btoTodo == 1) ? <Home /> : ""}
+          {(btoTodo == 1) ? <TodoList /> : ""}
           {(btoCalc == 1) ? <TheValues /> : ""}
         </main>
       </div>

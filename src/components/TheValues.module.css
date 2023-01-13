@@ -19,6 +19,7 @@
 
 .inputValues input {
   /* width: 100%; */
+  border: 0;
   padding: 0.3rem;
   text-align: right;
   margin: 0 0.3rem 0.3rem 0;
