@@ -16,7 +16,7 @@ export function Sidebar({ handleLink }){
       
       <footer className={styles.buttonLink}>
         <button name="Todo" onClick={() => handleLink("todo")}>
-          <ListChecks size={20}/> Lista - todo list</button>
+          <ListChecks size={20}/> To.do list</button>
         <button name="Calc" onClick={() => handleLink("calc")}>
         <Calculator size={20}/> Cálculos</button>
       </footer>

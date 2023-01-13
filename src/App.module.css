@@ -5,7 +5,7 @@
 
   display: grid;
   /*a 1° coluna sidebar tem larg fixa de 256px; a 2° é 1fr e pode oculpar o quanto couber na tela*/
-  grid-template-columns: 256px 1fr; 
+  grid-template-columns: 230px 1fr; 
   gap: 2rem;
   /* obriga as duas colunas(sidebar e post) estarem alinhados ao topo, caso contrario serão a sidebar seria esticada para ficar no mesmo tamanho do post*/
   /* align-items: center;

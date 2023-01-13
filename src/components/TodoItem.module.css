@@ -14,10 +14,6 @@
   margin: 0 0.8rem 0 0;
 }
 
-/* .todoListContent div > span {
-  margin: 0.3rem 3rem 0.3rem 1rem;
-} */
-
 .todoListContent:hover {
   color: var(--green-400);
 }
