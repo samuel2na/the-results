@@ -15,6 +15,9 @@ export function TodoList() {
   function handleAddNewItem(){
     if(!newItem) return alert("Informe um item válido!");
     
+    const isExistsNewItem = myItens.filter((f) => f.name == newItem);
+    if(isExistsNewItem != "") return alert(`O item: ${newItem} já está cadastrado!`);
+
     const data = { 
       id: String(new Date().getTime()),
       name: newItem 
@@ -27,7 +30,10 @@ export function TodoList() {
   }
 
   function handleDeleteItem(nameItem){
-    return alert(nameItem);
+    const newMyItens = myItens.filter((f) => f.name != nameItem);
+    
+    setMyItens(newMyItens);
+    setNewItem("");
   }
 
   return(
