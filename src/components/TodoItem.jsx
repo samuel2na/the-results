@@ -18,9 +18,9 @@ export function TodoItem({ nametext, handleDeleteItem }){
             {nametext}
           </span>
         </div>
-        
-          <Trash className={styles.buttonTrash} size={18} onClick={() => handleDeleteItem(nametext)} />
-        
+        <button>
+          <Trash size={18} onClick={() => handleDeleteItem(nametext)} />
+        </button>
       </div>
     </>
   ); 

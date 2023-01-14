@@ -12,10 +12,13 @@
   height: 2rem;
   text-align: center;
   border: 0;
-  /* width: 50%; */
 }
 
 .todoListBox > input:hover {
+  box-shadow: 2px 3px 7px var(--green-light-400);
+}
+
+.todoListBox > button:hover {
   box-shadow: 2px 3px 7px var(--green-light-400);
 }
 
@@ -29,5 +32,6 @@
   background: var(--green-500);
   color: var(--white);
   border: 0;
+  cursor: pointer;
 }
 

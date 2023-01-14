@@ -37,7 +37,7 @@
   margin: 0.75rem 0 2rem 0;
 }
 
-button:hover {
+.inputValues button:hover {
   opacity: calc(0.8);
   cursor: pointer;
   margin-right: 1px;

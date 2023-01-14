@@ -14,12 +14,21 @@
   margin: 0 0.8rem 0 0;
 }
 
-.todoListContent:hover {
+/* .todoListContent:hover {
   color: var(--green-400);
+} */
+
+.todoListContent button {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  color: var(--white);
+  border-radius: 2px;
 }
 
-.buttonTrash{
-  cursor: pointer;
+.todoListContent button:hover {
+  /* background: transparent; */
+  color: var(--red-500);
 }
 
 .checked {
