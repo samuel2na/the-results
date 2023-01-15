@@ -25,6 +25,18 @@
   box-sizing: border-box; /* impede que margin, padding..etc nunca aumentem a altura do elemento*/
 }
 
+html {
+   /* tamanho padrão da font-size para desktop é 16px 
+    obs.: REM equivale ao tamanho do font-size da tela */
+  @media(max-width: 1080px) {
+      font-size: 93.75%; /* 16 * 0,9375 = 15px */
+  }
+
+  @media(max-width: 720px) {
+      font-size: 81.5%; /* 16 * 0,875 = 14px --- 16 * 0,815 = 13px */
+  }
+}
+
 body {
   background-color: var(--gray-900);
   color: var(--gray-300);
@@ -34,5 +46,6 @@ body {
 body, input, textarea, button {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  font-size: 1rem; /* a font se adapata ao tamanho da tela 1rem = 16px; */
+  font-size: 0.85rem; 
+  /* a font se adapata ao tamanho da tela 1rem = 16px; */
 }
