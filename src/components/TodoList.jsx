@@ -26,6 +26,7 @@ export function TodoList() {
     
     let textInput = document.querySelector('[name="textItem"]');
     textInput.value = "";
+    setNewItem("");
     textInput.focus();
   }
 

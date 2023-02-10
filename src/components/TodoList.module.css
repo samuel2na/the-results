@@ -1,15 +1,18 @@
 .container {
-  width: 12.5rem; /*14rem;*/ /*27rem;*/
+  /* width: 20rem; */
+  /* width: 100%; */
+  text-align: center;
 }
 
 .todoListBox {
-  display: flex;
+  /* display: flex; */
   align-items: center;
   margin: 1rem 0 1rem 0;
 }
 
 .todoListBox > input {
   height: 2rem;
+  width: 13rem;
   text-align: center;
   border: 0;
 }
@@ -26,7 +29,8 @@
   margin-left: 0.5rem;
   height: 2rem;
   width: 2rem;
-  display: flex;
+  position: absolute;
+  /* display: flex; */
   align-items: center;
   justify-content: center;
   background: var(--green-500);
