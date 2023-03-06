@@ -7,6 +7,7 @@ export function TheValues(){
   const [valueSubtration, setValueSubtration] = useState(0);
   const [valueDivision, setValueDivision] = useState(0);
   const [valueMultiplication, setValueMultiplication] = useState(0);
+  const [valuePercentage, setValuePercentage] = useState(0);
 
   async function handleCalcule(){
     let vlrA = parseFloat(document.querySelector("#valueA").value);
@@ -22,12 +23,14 @@ export function TheValues(){
     const vSub = await NumberFormating(vlrA - vlrB);
     const vDiv = await NumberFormating(((v == 0)? 0 : vlrA / vlrB));
     const vMul = await NumberFormating(vlrA * vlrB);
+    const vPer = await NumberFormating((vlrB * 100) / vlrA);
     //console.log(vSum, vlrA, vlrB);
 
     setValueSum(vSum);
     setValueSubtration(vSub);
     setValueDivision(vDiv);
     setValueMultiplication(vMul);
+    setValuePercentage(vPer);
   }
 
   async function NumberFormating(theNumber){
@@ -61,8 +64,10 @@ export function TheValues(){
           <Results theTitle="Subtração: " theValue={valueSubtration} />
           <Results theTitle="Divisão: " theValue={valueDivision} />
           <Results theTitle="Multiplicação: " theValue={valueMultiplication} />
+          <Results theTitle="Porcentagem: " theValue={valuePercentage}
+                   comp="%" legend={`B equivale a #vlr% do valor A`}/>
           {/* 
-            - Raiz Quadrada; - Porcentagem; - 
+            - Raiz Quadrada; - Porcentagem; - ${valueB.value}
           */}
         </div>
         <div className={styles.msgAtualizations}>
