@@ -23,7 +23,7 @@ export function TheValues(){
     const vSub = await NumberFormating(vlrA - vlrB);
     const vDiv = await NumberFormating(((v == 0)? 0 : vlrA / vlrB));
     const vMul = await NumberFormating(vlrA * vlrB);
-    const vPer = await NumberFormating((vlrB * 100) / vlrA);
+    const vPer = await NumberFormating(((v == 0)? 0 : (vlrB * 100) / vlrA));
     //console.log(vSum, vlrA, vlrB);
 
     setValueSum(vSum);
