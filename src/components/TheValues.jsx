@@ -15,15 +15,17 @@ export function TheValues(){
     let v = 1;
     
     if(isNaN(vlrA) || isNaN(vlrB)) { 
-      alert("Informe números válidos!");
       vlrA = 0; vlrB = 0; v = 0;
+      alert("Informe números válidos!");
     }
+    if(vlrA == 0) { vlrA = 0; v = 0; }
+    if(vlrB == 0) { vlrB = 0; v = 0; }
 
-    const vSum = await NumberFormating(vlrA + vlrB);
-    const vSub = await NumberFormating(vlrA - vlrB);
-    const vDiv = await NumberFormating(((v == 0)? 0 : vlrA / vlrB));
+    const vSum = await NumberFormating(vlrA + vlrB, v);
+    const vSub = await NumberFormating(vlrA - vlrB, v);
+    const vDiv = await NumberFormating((vlrA / vlrB), v);
     const vMul = await NumberFormating(vlrA * vlrB);
-    const vPer = await NumberFormating(((v == 0)? 0 : (vlrB * 100) / vlrA));
+    const vPer = await NumberFormating(((vlrB * 100) / vlrA), v);
     //console.log(vSum, vlrA, vlrB);
 
     setValueSum(vSum);
@@ -33,8 +35,9 @@ export function TheValues(){
     setValuePercentage(vPer);
   }
 
-  async function NumberFormating(theNumber){
-    return (theNumber).toLocaleString('pt-BR', {
+  async function NumberFormating(theNumber, vfy){
+    const newNumber = (vfy == 0) ? 0 : theNumber;
+    return (newNumber).toLocaleString('pt-BR', {
       minimumFractionDigits: 2,
       maximumFractionDigits: 2
     });
